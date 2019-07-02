@@ -32,7 +32,7 @@ remove dynamic library debug symbol: arm-linux-androideabi-strip libopenal.so -o
 
 
 ## readthedocs dev
-* Install [Python-3.7.3](https://www.python.org/ftp/python/3.7.3/python-3.7.3-amd64.exe)
-* Install Python Extensions: sphinx, sphinx-autobuild, doc8: ```pip install sphinx sphinx-autobuild doc8``` for reStructedText preview.
-* Install [Microsoft VS Code](https://code.visualstudio.com/)
-* Install Microsoft VS Code extension: reStructedText, just search ```rst```
+1. Install [Python-3.7.3](https://www.python.org/ftp/python/3.7.3/python-3.7.3-amd64.exe)
+2. Install Python Extensions: sphinx, sphinx-autobuild, doc8: ```pip install sphinx sphinx-autobuild doc8``` for reStructedText preview.
+3. Install [Microsoft VS Code](https://code.visualstudio.com/)
+4. Install Microsoft VS Code extension: reStructedText, just search ```rst```
