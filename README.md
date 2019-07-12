@@ -37,3 +37,9 @@ remove dynamic library debug symbol: arm-linux-androideabi-strip libopenal.so -o
 For more detail, see: https://docs.restructuredtext.net/articles/prerequisites.html
 3. Install [Microsoft VS Code](https://code.visualstudio.com/)
 4. Install Microsoft VS Code extension: reStructedText, just search ```rst```
+
+## Use google angle GLES-2.0 in cocos2d-x
+1. Build angle latest source from google
+2. Copy libGLESv2.dll, libEGL.dll to your game directory
+3. Use glad to generate with OpenGL-2.0 GLES-2.0, and choose all extension
+4. Modify cocos2d-x sources to user glad, pitfall: ```glPolygonMode```, not present in GLES-2.0
