@@ -45,3 +45,6 @@ For more detail, see: https://docs.restructuredtext.net/articles/prerequisites.h
 4. Modify cocos2d-x sources to use glad, pitfall: ```glPolygonMode```, not present in GLES-2.0
 5. You need use [gles2gl](https://github.com/x-studio365/gles2gl) to translate GLES API to GL API at runtime.
 6. Modify GLProgram.cpp set ```headersDef``` same with ANDROID_PLATFORM
+
+## iOS xcodebuild export, xxx is not an 'iOS App Store'
+Add thinning=none to XXXExportOptions.plist
