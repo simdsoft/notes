@@ -33,7 +33,7 @@ remove dynamic library debug symbol: arm-linux-androideabi-strip libopenal.so -o
 
 ## readthedocs dev
 1. Install [Python-3.7.3](https://www.python.org/ftp/python/3.7.3/python-3.7.3-amd64.exe)
-2. Install Python Extensions: sphinx, sphinx-autobuild, doc8: ```pip install sphinx sphinx_rtd_theme sphinx_tabs``` for vscode rst preview.
+2. Install Python Extensions: sphinx, sphinx_rtd_theme, sphinx_tabs: ```pip install sphinx sphinx_rtd_theme sphinx_tabs``` for vscode rst preview.
 For more detail, see: https://docs.restructuredtext.net/articles/prerequisites.html
 3. Install [Microsoft VS Code](https://code.visualstudio.com/)
 4. Install Microsoft VS Code extension: reStructedText, just search ```rst```
