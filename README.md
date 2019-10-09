@@ -28,7 +28,7 @@ download: http://www.mpg123.de/
 
 ### libogg-1.3.4:
 ./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc  
-./configure --host=aarch64-linux-android CC=aarch64-linux-android
+./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc
 
 ### libvorbis-1.3.6:
 ./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc --with-ogg-includes=/usr/local/src/libogg-1.3.4/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.4/src/.libs/  
