@@ -16,8 +16,11 @@ export PATH=$PATH:/opt/arm-standalone-toolchain/bin
 
 ### openal-soft  
 https://github.com/kcat/openal-soft  
+export CMAKE_FIND_ROOT_PATH=/opt/arm-standalone-toolchain  
+export CMAKE_FIND_ROOT_PATH=/opt/arm64-standalone-toolchain  
 cd build  
-cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=arm-linux-androideabi -DCMAKE_C_FLAGS="-mfloat-abi=softfp -mfpu=neon" -DCMAKE_BUILD_TYPE=Release
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=arm-linux-androideabi -DCMAKE_C_FLAGS="-mfloat-abi=softfp -mfpu=neon" -DCMAKE_BUILD_TYPE=Release  
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=aarch64-linux-android -DCMAKE_BUILD_TYPE=Release  
 
 CMAKE_BUILD_TYPE options: Debug Release RelWithDebInfo MinSizeRel
 
