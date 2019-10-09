@@ -1,14 +1,13 @@
 # notes
 
-## wamp 3.x
+## wampserver 3.x
 ### Access form other computer on the local area network
 1. Change http.conf ```Require local``` to ```Require all granted```
 1. Change extra/http-vhosts.conf ```Require local``` to ```Require all granted```
 2. Check firewall strategy, ensure the httpd.exe in allow list.
 
-## AudioEngine dependencies at android platform
-### OS
-Ubuntu 18.04.3 or install it with VMWare
+## Build openal-soft dependencies for android platform
+### OS: Ubuntu 18.04.3 or install it with VMWare
 
 ### install dep-tools
 ```apt-get install autoconf automake cmake libtool git```
