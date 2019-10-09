@@ -7,15 +7,20 @@
 2. Check firewall strategy, ensure the httpd.exe in allow list.
 
 ## AudioEngine dependencies at android platform
+### OS
+Ubuntu 18.04.3 or install it with VMWare
+
 ### install dep-tools
 ```apt-get install autoconf automake cmake libtool git```
 
 ### make-standalone-toolchain
-```"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm" --platform="14" --stl=gnustl --install-dir="/opt/arm-standalone-toolchain"```  
-```"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm64" --platform="21" --stl=gnustl --install-dir="/opt/arm64-standalone-toolchain"```
+prepare: ```cp /usr/bin/python3.6 /usr/bin/python```
+```"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm" --platform="14" --stl=gnustl --install-dir="/opt/arm-standalone-toolchain" --verbose```  
+```"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm64" --platform="21" --stl=gnustl --install-dir="/opt/arm64-standalone-toolchain"  --verbose```
 
 ### Add standalone toolchain's bin directory to PATH
-```export PATH=$PATH:/opt/arm-standalone-toolchain/bin```
+```export PATH=/opt/arm-standalone-toolchain/bin:$PATH```
+```export PATH=/opt/arm64-standalone-toolchain/bin:$PATH```
 
 ### openal-soft  
 https://github.com/kcat/openal-soft  
