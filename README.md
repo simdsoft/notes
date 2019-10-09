@@ -21,7 +21,7 @@ CMAKE_BUILD_TYPE options: Debug Release RelWithDebInfo MinSizeRel
 download: http://www.mpg123.de/  
 ./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc CXX=arm-linux-androideabi-g++ --with-cpu=neon
 
-### libogg-1.3.3:
+### libogg-1.3.4:
 ./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc CXX=arm-linux-androideabi-g++
 
 ### libvorbis-1.3.6:
