@@ -7,20 +7,23 @@
 2. Check firewall strategy, ensure the httpd.exe in allow list.
 
 ## AudioEngine dependencies at android platform
+### install dep-tools
+```apt-get install autoconf automake cmake libtool git```
+
 ### make-standalone-toolchain
-"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm" --platform="14" --stl=gnustl --install-dir="/opt/arm-standalone-toolchain"
-"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm64" --platform="21" --stl=gnustl --install-dir="/opt/arm64-standalone-toolchain"
+```"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm" --platform="14" --stl=gnustl --install-dir="/opt/arm-standalone-toolchain"```
+```"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm64" --platform="21" --stl=gnustl --install-dir="/opt/arm64-standalone-toolchain"```
 
 ### Add standalone toolchain's bin directory to PATH
-export PATH=$PATH:/opt/arm-standalone-toolchain/bin
+```export PATH=$PATH:/opt/arm-standalone-toolchain/bin```
 
 ### openal-soft  
 https://github.com/kcat/openal-soft  
-export CMAKE_FIND_ROOT_PATH=/opt/arm-standalone-toolchain  
-export CMAKE_FIND_ROOT_PATH=/opt/arm64-standalone-toolchain  
+```export CMAKE_FIND_ROOT_PATH=/opt/arm-standalone-toolchain```  
+```export CMAKE_FIND_ROOT_PATH=/opt/arm64-standalone-toolchain```  
 cd build  
-cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=arm-linux-androideabi -DCMAKE_C_FLAGS="-mfloat-abi=softfp -mfpu=neon" -DCMAKE_BUILD_TYPE=Release  
-cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=aarch64-linux-android -DCMAKE_BUILD_TYPE=Release  
+```cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=arm-linux-androideabi -DCMAKE_C_FLAGS="-mfloat-abi=softfp -mfpu=neon" -DCMAKE_BUILD_TYPE=Release```  
+```cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=aarch64-linux-android -DCMAKE_BUILD_TYPE=Release```  
 
 CMAKE_BUILD_TYPE options: Debug Release RelWithDebInfo MinSizeRel
 
