@@ -22,13 +22,16 @@ CMAKE_BUILD_TYPE options: Debug Release RelWithDebInfo MinSizeRel
 
 ### mpg123
 download: http://www.mpg123.de/  
-./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc CXX=arm-linux-androideabi-g++ --with-cpu=neon
+./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc --with-cpu=neon  
+./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc --with-cpu=neon64
 
 ### libogg-1.3.4:
-./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc CXX=arm-linux-androideabi-g++
+./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc  
+./configure --host=aarch64-linux-android CC=aarch64-linux-android
 
 ### libvorbis-1.3.6:
-./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc CXX=arm-linux-androideabi-g++ --with-ogg-includes=/usr/local/src/libogg-1.3.4/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.4/src/.libs/
+./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc --with-ogg-includes=/usr/local/src/libogg-1.3.4/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.4/src/.libs/  
+./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc --with-ogg-includes=/usr/local/src/libogg-1.3.4/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.4/src/.libs/
 
 ### strip symbols
 remove static library debug symbol: arm-linux-androideabi-strip -g -S -d --strip-debug libogg.a -o libogg-r.a  
