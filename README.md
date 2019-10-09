@@ -8,7 +8,10 @@
 
 ## AudioEngine dependencies at android platform
 ### make-standalone-toolchain
-"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm" --platform="14" --stl=gnustl --install-dir="/opt/arm-toolchain-r10e"
+"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm" --platform="14" --stl=gnustl --install-dir="/opt/arm-standalone-toolchain"
+
+### Add standalone toolchain's bin directory to PATH
+export PATH=$PATH:/opt/arm-standalone-toolchain/bin
 
 ### openal-soft  
 https://github.com/kcat/openal-soft  
@@ -25,7 +28,7 @@ download: http://www.mpg123.de/
 ./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc CXX=arm-linux-androideabi-g++
 
 ### libvorbis-1.3.6:
-./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc CXX=arm-linux-androideabi-g++ --with-ogg-includes=/usr/local/src/libogg-1.3.3/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.3/src/.libs/
+./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc CXX=arm-linux-androideabi-g++ --with-ogg-includes=/usr/local/src/libogg-1.3.4/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.4/src/.libs/
 
 ### strip symbols
 remove static library debug symbol: arm-linux-androideabi-strip -g -S -d --strip-debug libogg.a -o libogg-r.a  
