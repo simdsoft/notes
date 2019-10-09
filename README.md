@@ -9,6 +9,7 @@
 ## AudioEngine dependencies at android platform
 ### make-standalone-toolchain
 "$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm" --platform="14" --stl=gnustl --install-dir="/opt/arm-standalone-toolchain"
+"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm64" --platform="21" --stl=gnustl --install-dir="/opt/arm64-standalone-toolchain"
 
 ### Add standalone toolchain's bin directory to PATH
 export PATH=$PATH:/opt/arm-standalone-toolchain/bin
