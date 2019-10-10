@@ -66,3 +66,6 @@ For more detail, see: https://docs.restructuredtext.net/articles/prerequisites.h
 
 ## iOS xcodebuild export, xxx is not an 'iOS App Store' profile.
 Add thinning=none to XXXExportOptions.plist
+
+## Use Visual Studio find chinese charactors regex expression
+```.*[\u4e00-\u9fa5]{1,}.*```
