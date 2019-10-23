@@ -75,6 +75,9 @@ Add thinning=none to XXXExportOptions.plist
 ```.*[\u4e00-\u9fa5]{1,}.*```
 
 ## Android Studio maven private server
+### alternative solution
+* nexus: https://www.sonatype.com/nexus-repository-oss
+* jfrog: https://jfrog.com/open-source
 ### official
 * google(): https://dl.google.com/dl/android/maven2/  
 * jcenter(): https://jcenter.bintray.com/  
