@@ -84,3 +84,6 @@ Add thinning=none to XXXExportOptions.plist
 ### aliyun: 
 * google(): http://maven.aliyun.com/nexus/content/repositories/google 
 * jcenter(): http://maven.aliyun.com/nexus/content/repositories/jcenter
+
+### gradle:
+https://services.gradle.org/distributions/
