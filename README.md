@@ -73,3 +73,11 @@ Add thinning=none to XXXExportOptions.plist
 
 ## Use Visual Studio find chinese charactors regex expression
 ```.*[\u4e00-\u9fa5]{1,}.*```
+
+## Android Studio maven private server
+### official
+* google(): https://dl.google.com/dl/android/maven2/  
+* jcenter(): https://jcenter.bintray.com/  
+### aliyun: 
+* google(): http://maven.aliyun.com/nexus/content/repositories/google 
+* jcenter(): http://maven.aliyun.com/nexus/content/repositories/jcenter
