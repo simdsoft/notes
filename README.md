@@ -85,7 +85,7 @@ Add thinning=none to XXXExportOptions.plist
 * google(): http://maven.aliyun.com/nexus/content/repositories/google 
 * jcenter(): http://maven.aliyun.com/nexus/content/repositories/jcenter
 
-### disable domain at hosts: repo.maven.apache.org
+### disable domain at hosts: repo.maven.apache.org 151.101.52.215
 
 ### gradle:
 https://services.gradle.org/distributions/
