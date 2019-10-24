@@ -85,7 +85,7 @@ Add thinning=none to XXXExportOptions.plist
 ### official
 * google(): https://dl.google.com/dl/android/maven2/  
 * jcenter(): https://jcenter.bintray.com/  
-* mavenCentral(): https://repo.maven.apache.org/maven2/ or https://repo1.maven.org/maven2/
+* mavenCentral(): https://repo.maven.apache.org/maven2/ or https://repo1.maven.org/maven2/ or http://central.maven.org/maven2/
 ### aliyun: 
 * google(): http://maven.aliyun.com/nexus/content/repositories/google 
 * jcenter(): http://maven.aliyun.com/nexus/content/repositories/jcenter
