@@ -78,6 +78,9 @@ Add thinning=none to XXXExportOptions.plist
 ### alternative solution
 * nexus: https://www.sonatype.com/nexus-repository-oss
 * jfrog: https://jfrog.com/open-source
+#### nexus
+ nexus /install
+ net start nexus
 ### official
 * google(): https://dl.google.com/dl/android/maven2/  
 * jcenter(): https://jcenter.bintray.com/  
