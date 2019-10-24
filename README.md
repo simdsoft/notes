@@ -81,6 +81,7 @@ Add thinning=none to XXXExportOptions.plist
 #### nexus
  nexus /install
  net start nexus
+ package url format: http://127.0.0.1:9910/repository/maven-public/com/android/tools/lint/lint/26.2.1/lint-26.2.1.pom
 ### official
 * google(): https://dl.google.com/dl/android/maven2/  
 * jcenter(): https://jcenter.bintray.com/  
