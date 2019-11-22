@@ -71,6 +71,10 @@ For Chinese system language users:
 ## iOS xcodebuild export, xxx is not an 'iOS App Store' profile.
 Add thinning=none to XXXExportOptions.plist
 
+## macOS devenv
+Install brew:
+```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
+
 ## Use Visual Studio find chinese charactors regex expression
 ```.*[\u4e00-\u9fa5]{1,}.*```
 
