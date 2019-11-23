@@ -77,6 +77,8 @@ Install brew:
 The solution of CMake Error: iphoneos is not an iOS SDK:  
 ```sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer```  
 see also: https://github.com/leetal/ios-cmake/issues/52  
+CMake Gen ios xcodeproject:
+```cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphoneos -DCMAKE_C_COMPILER=/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -DCMAKE_CXX_COMPILER=/Applications/Xcode.app/Contents/Developer/usr/bin/g++```
 
 ## Use Visual Studio find chinese charactors regex expression
 ```.*[\u4e00-\u9fa5]{1,}.*```
