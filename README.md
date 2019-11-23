@@ -73,7 +73,10 @@ Add thinning=none to XXXExportOptions.plist
 
 ## macOS devenv
 Install brew:
-```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
+```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```  
+The solution of CMake Error: iphoneos is not an iOS SDK:  
+```sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer```  
+see also: https://github.com/leetal/ios-cmake/issues/52  
 
 ## Use Visual Studio find chinese charactors regex expression
 ```.*[\u4e00-\u9fa5]{1,}.*```
