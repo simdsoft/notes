@@ -18,7 +18,7 @@ prepare: ```cp /usr/bin/python3.6 /usr/bin/python```
 ```"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm64" --platform="21" --stl=gnustl --install-dir="/opt/arm64-standalone-toolchain"  --verbose```
 
 ### Add standalone toolchain's bin directory to PATH
-```export PATH=/opt/arm-standalone-toolchain/bin:$PATH```
+```export PATH=/opt/arm-standalone-toolchain/bin:$PATH```  
 ```export PATH=/opt/arm64-standalone-toolchain/bin:$PATH```
 
 ### openal-soft  
