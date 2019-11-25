@@ -14,39 +14,49 @@
 
 ### make-standalone-toolchain
 prepare: ```cp /usr/bin/python3.6 /usr/bin/python```  
-```"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm" --platform="14" --stl=gnustl --install-dir="/opt/arm-standalone-toolchain" --verbose```  
-```"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm64" --platform="21" --stl=gnustl --install-dir="/opt/arm64-standalone-toolchain"  --verbose```
+```sh
+"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm" --platform="14" --stl=gnustl --install-dir="/opt/arm-standalone-toolchain" --verbose
+"$ANDROID_NDK/build/tools/make-standalone-toolchain.sh" --arch="arm64" --platform="21" --stl=gnustl --install-dir="/opt/arm64-standalone-toolchain"  --verbose
+```
 
 ### Add standalone toolchain's bin directory to PATH
-```export PATH=/opt/arm-standalone-toolchain/bin:$PATH```  
-```export PATH=/opt/arm64-standalone-toolchain/bin:$PATH```
+```sh
+export PATH=/opt/arm-standalone-toolchain/bin:$PATH  
+export PATH=/opt/arm64-standalone-toolchain/bin:$PATH
+```
 
 ### openal-soft  
-```git clone https://github.com/halx99/openal-soft```  
-```git checkout v1.19-aspec```  
-```export CMAKE_FIND_ROOT_PATH=/opt/arm-standalone-toolchain```  
-```export CMAKE_FIND_ROOT_PATH=/opt/arm64-standalone-toolchain```  
+```sh
+git clone https://github.com/halx99/openal-soft
+git checkout v1.19-aspec
+export CMAKE_FIND_ROOT_PATH=/opt/arm-standalone-toolchain
+export CMAKE_FIND_ROOT_PATH=/opt/arm64-standalone-toolchain
 cd build  
-```cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=arm-linux-androideabi -DCMAKE_C_FLAGS="-mfloat-abi=softfp -mfpu=neon" -DCMAKE_BUILD_TYPE=Release```  
-```cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=aarch64-linux-android -DCMAKE_BUILD_TYPE=Release```  
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=arm-linux-androideabi -DCMAKE_C_FLAGS="-mfloat-abi=softfp -mfpu=neon" -DCMAKE_BUILD_TYPE=Release
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=aarch64-linux-android -DCMAKE_BUILD_TYPE=Release
+```  
 
 CMAKE_BUILD_TYPE options: Debug Release RelWithDebInfo MinSizeRel
 
 ### mpg123
 download: http://www.mpg123.de/  
-```curl http://www.mpg123.de/download/mpg123-1.25.13.tar.bz2 --output ./mpg123-1.25.13.tar.bz2```  
-```./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc --with-cpu=neon```  
-```./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc --with-cpu=neon64```
+```sh
+curl http://www.mpg123.de/download/mpg123-1.25.13.tar.bz2 --output ./mpg123-1.25.13.tar.bz2
+./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc --with-cpu=neon
+./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc --with-cpu=neon64
+```
 
 ### libogg-1.3.4:
-```curl http://downloads.xiph.org/releases/ogg/libogg-1.3.4.tar.xz --output ./libogg-1.3.4.tar.xz```  
-```./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc```  
-```./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc```
+```sh
+./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc
+./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc
+```
 
-### libvorbis-1.3.6:
-```curl http://downloads.xiph.org/releases/vorbis/libvorbis-1.3.6.tar.xz --output ./libvorbis-1.3.6.tar.xz```  
-```./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc --with-ogg-includes=/usr/local/src/libogg-1.3.4/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.4/src/.libs/```  
-```./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc --with-ogg-includes=/usr/local/src/libogg-1.3.4/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.4/src/.libs/```
+### libvorbis-1.3.6: 
+```sh
+./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc --with-ogg-includes=/usr/local/src/libogg-1.3.4/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.4/src/.libs/
+./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc --with-ogg-includes=/usr/local/src/libogg-1.3.4/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.4/src/.libs/
+```
 
 ### strip symbols
 remove static library debug symbol: ```arm-linux-androideabi-strip -g -S -d --strip-debug libogg.a -o libogg-r.a```  
