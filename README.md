@@ -120,3 +120,6 @@ https://services.gradle.org/distributions/
 
 ## wireshak cap
 Use WinPcap 4.1.3
+
+## global mobile games website:
+https://apkpure.com/
