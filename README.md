@@ -111,6 +111,13 @@ cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DP
 cmake --build . --config Release --target ogg
 ```
 
+### vorbis
+```sh
+mkdir build
+cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DPLATFORM=OS -DOGG_INCLUDE_DIRS=/Users/halx99/Documents/ogg/include -DOGG_LIBRARIES=/Users/halx99/Documents/ogg/build/Release-iphoneos/
+cmake --build . --config Release --target vorbis
+```
+
 ## Use Visual Studio find chinese charactors regex expression
 ```.*[\u4e00-\u9fa5]{1,}.*```
 
