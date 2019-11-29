@@ -84,14 +84,32 @@ For Chinese system language users:
 ## iOS xcodebuild export, xxx is not an 'iOS App Store' profile.
 Add thinning=none to XXXExportOptions.plist
 
-## macOS devenv
-Install brew:
+## Build openal-soft dependencies for ios platform
+### devenv setup
+1. Install brew:
 ```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```  
-The solution of CMake Error: iphoneos is not an iOS SDK:  
-```sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer```  
+2. Install tools:
+```
+brew update
+brew install git
+brew install cmake
+brew install autoconf
+brew install automake
+brew install libtool
+```
+3. Clone ios-cmake from github: https://github.com/leetal/ios-cmake
+4. The solution of CMake Error: iphoneos is not an iOS SDK:  
+important: ```sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer``` . 
 see also: https://github.com/leetal/ios-cmake/issues/52  
 CMake Gen ios xcodeproject:
 ```cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphoneos -DCMAKE_C_COMPILER=/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -DCMAKE_CXX_COMPILER=/Applications/Xcode.app/Contents/Developer/usr/bin/g++```
+
+### ogg
+```sh
+mkdir build
+cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DPLATFORM=OS
+cmake --build . --config Release --target ogg
+```
 
 ## Use Visual Studio find chinese charactors regex expression
 ```.*[\u4e00-\u9fa5]{1,}.*```
