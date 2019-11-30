@@ -122,7 +122,7 @@ cmake --build . --config Release --target vorbis
 ```lipo -info libogg.a```
 
 ### combine archs libs
-```/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static /Users/halx99/Documents/ogg/build/libogg.build/Release-iphoneos/ogg.build/Objects-normal/armv7/ arm64/libxx.a -o /combined/libxx.a```
+```/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static /Users/halx99/Documents/ogg/build/libogg.build/Release-iphoneos/ogg.build/Objects-normal/armv7/libogg.a arm64/libogg.a -o ./lib/libogg.a```
 
 ## Use Visual Studio find chinese charactors regex expression
 ```.*[\u4e00-\u9fa5]{1,}.*```
