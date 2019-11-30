@@ -118,6 +118,9 @@ cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DP
 cmake --build . --config Release --target vorbis
 ```
 
+### check arch of .a
+```lipo -info libogg.a```
+
 ## Use Visual Studio find chinese charactors regex expression
 ```.*[\u4e00-\u9fa5]{1,}.*```
 
