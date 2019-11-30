@@ -109,20 +109,20 @@ CMake Gen ios xcodeproject:
 mkdir build
 cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DPLATFORM=OS
 cmake --build . --config Release --target ogg
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static ./build/libogg.build/Release-iphoneos/ogg.build/Objects-normal/armv7/libogg.a ./build_x86/Release-iphonesimulator/libogg.a ./build_x64/Release-iphonesimulator/libogg.a ./build/libogg.build/Release-iphoneos/ogg.build/Objects-normal/arm64/libogg.a -o ./lib/libogg.a
 ```
 
 ### vorbis
 ```sh
 mkdir build
-cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DPLATFORM=OS -DOGG_INCLUDE_DIRS=/Users/halx99/Documents/ogg/include -DOGG_LIBRARIES=/Users/halx99/Documents/ogg/build/Release-iphoneos/
-cmake --build . --config Release --target vorbis
+cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DOGG_INCLUDE_DIRS=/Users/halx99/Documents/ogg/include -DOGG_LIBRARIES=/Users/halx99/Documents/ogg/lib/ -DPLATFORM=OS
+cmake --build . --config Release --target vorbis vorbisfile
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static ./build/lib/vorbis.build/Release-iphoneos/vorbis.build/Objects-normal/armv7/libvorbis.a ./build_x86/lib/Release-iphonesimulator/libvorbis.a ./build_x64/lib/Release-iphonesimulator/libvorbis.a ./build/lib/vorbis.build/Release-iphoneos/vorbis.build/Objects-normal/arm64/libvorbis.a -o ./libs/libvorbis.a
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static ./build/lib/vorbis.build/Release-iphoneos/vorbisfile.build/Objects-normal/armv7/libvorbisfile.a ./build_x86/lib/Release-iphonesimulator/libvorbisfile.a ./build_x64/lib/Release-iphonesimulator/libvorbisfile.a ./build/lib/vorbis.build/Release-iphoneos/vorbisfile.build/Objects-normal/arm64/libvorbisfile.a -o ./libs/libvorbisfile.a
 ```
 
 ### check arch of .a
 ```lipo -info libogg.a```
-
-### combine archs libs
-```/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static /Users/halx99/Documents/ogg/build/libogg.build/Release-iphoneos/ogg.build/Objects-normal/armv7/libogg.a arm64/libogg.a -o ./lib/libogg.a```
 
 ## Use Visual Studio find chinese charactors regex expression
 ```.*[\u4e00-\u9fa5]{1,}.*```
