@@ -44,7 +44,8 @@ download: http://www.mpg123.de/
 curl http://www.mpg123.de/download/mpg123-1.25.13.tar.bz2 --output ./mpg123-1.25.13.tar.bz2
 ./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc --with-cpu=neon
 ./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc --with-cpu=neon64
-```
+```  
+for non-win32 platforms, you should copy mpg123.h from ```src/libmpg123/mpg123.h``` after configure finished.
 
 ### libogg-1.3.4:
 ```sh
