@@ -155,3 +155,6 @@ Use WinPcap 4.1.3
 
 ## global mobile games website:
 https://apkpure.com/
+
+## show vctools version option
+-Bv
