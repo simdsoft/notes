@@ -10,7 +10,11 @@
 ### OS: Ubuntu 18.04.3 or install it with VMWare
 
 ### install dep-tools
-```apt-get install autoconf automake cmake libtool git```
+```sh
+apt-get update
+apt-get install gcc-multilib
+apt-get install autoconf automake cmake libtool git
+```
 
 ### make-standalone-toolchain
 prepare: ```cp /usr/bin/python3.6 /usr/bin/python```  
