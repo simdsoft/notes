@@ -162,3 +162,9 @@ https://apkpure.com/
 
 ## show vctools version option
 -Bv
+
+## git update submodule url
+git submodule sync
+
+## git remove submodule
+git rm --cached {submodule_path}
