@@ -171,3 +171,9 @@ git rm --cached {submodule_path}
 
 ## Chrome Latest Offline Download
 [ChromeStandaloneSetup64.exe](https://www.google.cn/chrome/?standalone=1&platform=win64)
+
+## Unity3D Paths
+### Android
+streamingAssetsPath: jar:file://${APK_PATH}!assets  
+persistentDataPath: external storage path, Android/data/${PackageName}/files  
+dataPath: ${APK_PATH}  
