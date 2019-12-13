@@ -168,3 +168,6 @@ git submodule sync
 
 ## git remove submodule
 git rm --cached {submodule_path}
+
+## Chrome Latest Offline Download
+[ChromeStandaloneSetup64.exe](https://www.google.cn/chrome/?standalone=1&platform=win64)
