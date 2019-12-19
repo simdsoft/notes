@@ -177,3 +177,15 @@ git rm --cached {submodule_path}
 streamingAssetsPath: jar:file://${APK_PATH}!assets  
 persistentDataPath: external storage path, Android/data/${PackageName}/files  
 dataPath: ${APK_PATH}  
+
+## Install latest cmake on non-win32 platform
+```sh
+wget https://github.com/Kitware/CMake/releases/download/v3.16.2/cmake-3.16.2.tar.gz -o ./cmake-3.16.2.tar.gz 
+tar -xvf cmake-3.16.2.tar.gz
+cd cmake-3.16.2
+./configure
+make
+make install
+```
+
+
