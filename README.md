@@ -76,7 +76,9 @@ cmake .. -DCMAKE_TOOLCHAIN_FILE=../../android-cmake/android.toolchain.cmake -DAN
 
 ### strip symbols
 remove static library debug symbol: ```arm-linux-androideabi-strip -g -S -d --strip-debug libogg.a -o libogg-r.a```  
-remove dynamic library debug symbol: ```arm-linux-androideabi-strip libopenal.so -o /mnt/hgfs/ushared/libopenal.so```
+remove dynamic library debug symbol: ```arm-linux-androideabi-strip libopenal.so -o /mnt/hgfs/ushared/libopenal.so```  
+  
+arm64-v8a: use **aarch64-linux-android-strip**
 
 
 ## readthedocs dev
