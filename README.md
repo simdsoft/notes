@@ -51,16 +51,27 @@ curl http://www.mpg123.de/download/mpg123-1.25.13.tar.bz2 --output ./mpg123-1.25
 ```  
 for non-win32 platforms, you should copy mpg123.h from ```src/libmpg123/mpg123.h``` after configure finished.
 
-### libogg-1.3.4:
+### libogg-1.3.3:
 ```sh
 ./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc
 ./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc
 ```
+### libogg-1.3.4 (require android-cmake: https://github.com/taka-no-me/android-cmake)
+```sh
+mkdir build_arm64
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../../android-cmake/android.toolchain.cmake -DANDROID_NDK=/usr/local/src/android-ndk-r14b -DCMAKE_BUILD_TYPE=Release -DANDROID_ABI="arm64-v8a" ANDROID_NATIVE_API_LEVEL=android-21 .. -DCMAKE_MAKE_PROGRAM=/opt/arm64-standalone-toolchain/bin/makecmake -DCMAKE_TOOLCHAIN_FILE=../../android-cmake/android.toolchain.cmake -DANDROID_NDK=/usr/local/src/android-ndk-r14b -DCMAKE_BUILD_TYPE=Release -DANDROID_ABI="arm64-v8a" -DCMAKE_MAKE_PROGRAM=/usr/local/src/android-ndk-r14b/prebuilt/linux-x86_64/bin/make
+```
 
-### libvorbis-1.3.6: 
+### libvorbis-1.3.6 with libogg-1.3.3: 
+```sh
+./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc --with-ogg-includes=/usr/local/src/libogg-1.3.3/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.3/src/.libs/
+./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc --with-ogg-includes=/usr/local/src/libogg-1.3.3/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.3/src/.libs/
+```
+
+### libvorbis-1.3.6 with libogg-1.3.4: 
 ```sh
 ./configure --host=arm-linux-androideabi CC=arm-linux-androideabi-gcc --with-ogg-includes=/usr/local/src/libogg-1.3.4/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.4/src/.libs/
-./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc --with-ogg-includes=/usr/local/src/libogg-1.3.4/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.4/src/.libs/
+./configure --host=aarch64-linux-android CC=aarch64-linux-android-gcc --with-ogg-includes=/usr/local/src/libogg-1.3.4/include/ --with-ogg-libraries=/usr/local/src/libogg-1.3.4/build_arm64
 ```
 
 ### strip symbols
