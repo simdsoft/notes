@@ -99,6 +99,8 @@ gclient error solution:
 For Chinese system language users:  
 在 控制面板-区域-更改系统区域设置 中  
 勾选 Beta版：使用 Unicode UTF=8 提供全球语言支持(U) 选项  
+python ImportError: No module named win32file:  
+python -m pip install pywin32  
 
 ## iOS xcodebuild export, xxx is not an 'iOS App Store' profile.
 Add thinning=none to XXXExportOptions.plist
