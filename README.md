@@ -35,8 +35,9 @@ git clone https://github.com/halx99/openal-soft
 git checkout v1.19-aspec
 export CMAKE_FIND_ROOT_PATH=/opt/arm-standalone-toolchain
 export CMAKE_FIND_ROOT_PATH=/opt/arm64-standalone-toolchain
-cd build  
-cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=arm-linux-androideabi -DCMAKE_C_FLAGS="-mfloat-abi=softfp -mfpu=neon" -DCMAKE_BUILD_TYPE=Release
+cd build
+# if api-level is 9, remove -DHAVE_LOG2F=1
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=arm-linux-androideabi -DCMAKE_C_FLAGS="-mfloat-abi=softfp -mfpu=neon" -DCMAKE_BUILD_TYPE=Release -DHAVE_LOG2F=1
 cmake .. -DCMAKE_TOOLCHAIN_FILE=../XCompile-Android.txt -DHOST=aarch64-linux-android -DCMAKE_BUILD_TYPE=Release
 ```  
 
