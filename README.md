@@ -1,5 +1,14 @@
 # notes
 
+## build apk, config noCompress file type at app/build.gradle
+```gradle
+android {
+    aaptOptions {
+       noCompress 'mp3','ogg','wav','mp4','ttf'
+    }
+}
+```
+
 ## wampserver 3.x
 ### Access form other computer on the local area network
 1. Change http.conf ```Require local``` to ```Require all granted```
