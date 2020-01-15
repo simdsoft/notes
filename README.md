@@ -214,4 +214,11 @@ make
 make install
 ```
 
+## Upgrade ubuntu
+```sh
+apt update && apt dist-upgrade
+apt-get install screen
+screen # Avoid ssh connection lost
+do-release-upgrade -d
+```
 
