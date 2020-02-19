@@ -2,9 +2,13 @@
 
 ## Create Visual Studio 2019 offline installer
 For C++ desktop development, run:
-```vs_community.exe --layout D:\vs2019-16.4-offline --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US```
+```bat
+vs_community.exe --layout D:\vs2019-16.4-offline --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
+```
 For .Net & C++ desktop development, run:
-```vs_community.exe --layout D:\vs2019-16.4-offline --add Microsoft.VisualStudio.Workload.NativeDesktop --add  Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended  --lang en-US```
+```bat
+vs_community.exe --layout D:\vs2019-16.4-offline --add Microsoft.VisualStudio.Workload.NativeDesktop --add  Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended  --lang en-US
+```
 
 ## build apk, config noCompress file type at app/build.gradle
 ```gradle
