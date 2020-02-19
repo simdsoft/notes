@@ -7,7 +7,7 @@ vs_community.exe --layout D:\vs2019-16.4-offline --add Microsoft.VisualStudio.Wo
 ```
 For .Net & C++ desktop development, run:
 ```bat
-vs_community.exe --layout D:\vs2019-16.4-offline --add Microsoft.VisualStudio.Workload.NativeDesktop --add  Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended  --lang en-US
+vs_community.exe --layout D:\vs2019-16.4-offline --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended  --lang en-US
 ```
 
 ## build apk, config noCompress file type at app/build.gradle
