@@ -1,5 +1,8 @@
 # notes
 
+## Apple cert profile cache directory
+```~/Library/MobileDevice/Provisioning Profiles```
+
 ## Create Visual Studio 2019 offline installer
 For C++ desktop development, run:
 ```bat
