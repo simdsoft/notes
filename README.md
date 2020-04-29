@@ -2,10 +2,14 @@
 ## vs2019 cl.exe optimize options
 https://docs.microsoft.com/en-us/cpp/build/reference/o1-o2-minimize-size-maximize-speed?view=vs-2019
 
-## test
-| Header One     | Header Two     |
-| :------------- | :------------- |
-| Item One       | Item Two       |
+###### Header 6
+
+| head1        | head two          | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
 
 ## Apple cert profile cache directory
 ```~/Library/MobileDevice/Provisioning Profiles```
