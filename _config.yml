@@ -2,3 +2,5 @@ markdown: kramdown
 kramdown:
     input: GFM
 highlighter: rouge
+
+theme: jekyll-theme-cayman
