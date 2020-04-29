@@ -2,6 +2,12 @@
 ## vs2019 cl.exe optimize options
 https://docs.microsoft.com/en-us/cpp/build/reference/o1-o2-minimize-size-maximize-speed?view=vs-2019
 
+## test
+| Web страница        | CSV                         | Разширени резултати CSV                      |
+|:-------------------:|:---------------------------:|:---------------------------------------------:|
+| [A](2017/results/A) | [A.csv](2017/results/A.csv) | [A-extended.csv](2017/results/A-extended.csv) |
+| [B](2017/results/B) | [B.csv](2017/results/B.csv) | [B-extended.csv](2017/results/B-extended.csv) |
+
 ## Apple cert profile cache directory
 ```~/Library/MobileDevice/Provisioning Profiles```
 
