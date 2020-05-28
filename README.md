@@ -1,4 +1,13 @@
 # notes
+
+## Gets expand/collapse icon size of TreeView
+```cpp
+auto themeData = OpenThemeData(m_wndTreeView.GetSafeHwnd(), VSCLASS_TREEVIEW);
+SIZE tvButtonSize = { 0 };
+GetThemePartSize(themeData, NULL, TVP_GLYPH, GLPS_OPENED, NULL, TS_DRAW, &tvButtonSize);
+CloseThemeData(themeData);
+```
+
 ## vs2019 cl.exe optimize options
 https://docs.microsoft.com/en-us/cpp/build/reference/o1-o2-minimize-size-maximize-speed?view=vs-2019
 
