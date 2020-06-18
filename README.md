@@ -1,5 +1,8 @@
 # notes
 
+## Get AAssetManager by ndk
+https://stackoverflow.com/questions/58980171/using-aassetmanager-fromjava-within-plugin-not-directly-called-from-java-vm-cal
+
 ## Gets expand/collapse icon size of TreeView
 ```cpp
 auto themeData = OpenThemeData(m_wndTreeView.GetSafeHwnd(), VSCLASS_TREEVIEW);
