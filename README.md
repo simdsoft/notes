@@ -1,5 +1,13 @@
 # notes
 
+## Dump cmake builtin macros
+```cmake
+get_cmake_property(_variableNames VARIABLES)
+foreach (_variableName ${_variableNames})
+  message(STATUS "${_variableName}=${${_variableName}}")
+endforeach()
+```
+
 ## Get AAssetManager by ndk
 https://stackoverflow.com/questions/58980171/using-aassetmanager-fromjava-within-plugin-not-directly-called-from-java-vm-cal
 
