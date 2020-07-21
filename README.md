@@ -153,6 +153,7 @@ python -m pip install pywin32
 Add thinning=none to XXXExportOptions.plist
 
 ## Build openal-soft dependencies for ios platform
+### xcode11 + cmake-3.17.3 works well
 ### devenv setup
 1. Install brew:
 ```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```  
@@ -169,12 +170,12 @@ brew install libtool
 4. The solution of CMake Error: iphoneos is not an iOS SDK:  
 important: ```sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer``` . 
 see also: https://github.com/leetal/ios-cmake/issues/52  
-CMake Gen ios xcodeproject:
+CMake Gen ios xcodeproject with default cmake toolchain:
 ```cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphoneos -DCMAKE_C_COMPILER=/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -DCMAKE_CXX_COMPILER=/Applications/Xcode.app/Contents/Developer/usr/bin/g++```
 
 5. openal: https://github.com/kcat/openal-soft
 ```sh
-cmake -GXcode ..  -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphonesimulator  -DALSOFT_REQUIRE_COREAUDIO=ON  -DALSOFT_EMBED_HRTF_DATA=YES -DLIBTYPE=STATIC -DALSOFT_UTILS=OFF -DALSOFT_EXAMPLES=OFF
+cmake -GXcode .. -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DPLATFORM=OS  -DALSOFT_REQUIRE_COREAUDIO=ON  -DALSOFT_EMBED_HRTF_DATA=YES -DLIBTYPE=STATIC -DALSOFT_UTILS=OFF -DALSOFT_EXAMPLES=OFF
 ```
 
 ### ogg
