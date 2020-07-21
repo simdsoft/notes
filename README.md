@@ -1,5 +1,8 @@
 # notes
 
+## Upgrade brew with mirrors
+https://www.jianshu.com/p/62f1b963baa6
+
 ## Dump cmake builtin macros
 ```cmake
 get_cmake_property(_variableNames VARIABLES)
@@ -168,6 +171,11 @@ important: ```sudo xcode-select -switch /Applications/Xcode.app/Contents/Develop
 see also: https://github.com/leetal/ios-cmake/issues/52  
 CMake Gen ios xcodeproject:
 ```cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphoneos -DCMAKE_C_COMPILER=/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -DCMAKE_CXX_COMPILER=/Applications/Xcode.app/Contents/Developer/usr/bin/g++```
+
+5. openal: https://github.com/kcat/openal-soft
+```sh
+cmake -GXcode ..  -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphonesimulator  -DALSOFT_REQUIRE_COREAUDIO=ON  -DALSOFT_EMBED_HRTF_DATA=YES -DLIBTYPE=STATIC -DALSOFT_UTILS=OFF -DALSOFT_EXAMPLES=OFF
+```
 
 ### ogg
 ```sh
