@@ -198,6 +198,11 @@ cmake --build . --config Release --target vorbis vorbisfile
 ### check arch of .a
 ```lipo -info libogg.a```
 
+### Combine .a manually
+```sh
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static /Users/bel/dev/openal-soft/build/OpenAL.build/Release-iphoneos/OpenAL.build/Objects-normal/armv7/libopenal.a /Users/bel/dev/openal-soft/build64/Release-iphonesimulator/libopenal.a /Users/bel/dev/openal-soft/build/OpenAL.build/Release-iphoneos/OpenAL.build/Objects-normal/arm64/libopenal.a -o /Users/bel/dev/openal-soft/build/Release-iphoneos/libopenal.a 
+```
+
 ## Use Visual Studio find chinese charactors regex expression
 ```.*[\u4e00-\u9fa5]{1,}.*```
 
