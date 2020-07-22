@@ -152,7 +152,7 @@ python -m pip install pywin32
 ## iOS xcodebuild export, xxx is not an 'iOS App Store' profile.
 Add thinning=none to XXXExportOptions.plist
 
-## Build openal-soft dependencies for ios platform
+## Build openal-soft for ios platform
 ### xcode11 + cmake-3.17.3 works well
 ### devenv setup
 1. Install brew:
@@ -175,7 +175,7 @@ CMake Gen ios xcodeproject with default cmake toolchain:
 
 5. openal: https://github.com/kcat/openal-soft
 ```sh
-cmake -GXcode .. -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DPLATFORM=OS  -DALSOFT_REQUIRE_COREAUDIO=ON  -DALSOFT_EMBED_HRTF_DATA=YES -DLIBTYPE=STATIC -DALSOFT_UTILS=OFF -DALSOFT_EXAMPLES=OFF
+cmake -GXcode .. -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DPLATFORM=OS -DCMAKE_CXX_EXTENSIONS=OFF -DALSOFT_REQUIRE_COREAUDIO=ON  -DALSOFT_EMBED_HRTF_DATA=YES -DLIBTYPE=STATIC -DALSOFT_UTILS=OFF -DALSOFT_EXAMPLES=OFF
 ```
 
 ### ogg
