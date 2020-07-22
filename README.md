@@ -204,7 +204,9 @@ cmake --build . --config Release --target vorbis vorbisfile
 ```
 
 ## Use Visual Studio find chinese charactors regex expression
-```.*[\u4e00-\u9fa5]{1,}.*```
+```sh
+.*[\u4e00-\u9fa5]{1,}.*
+```
 
 ## Android Studio maven private server
 ### alternative solution
