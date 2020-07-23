@@ -1,7 +1,10 @@
 # notes
 
 ## Upgrade brew with mirrors
-https://www.jianshu.com/p/62f1b963baa6
+Install: https://gitee.com/simdsoft/brew-install  
+Update: modify /usr/local/Homebrew/Library/Homebrew/install.sh  
+change homebrew-core repo to https://gitee.com/simdsoft/homebrew-core  
+https://www.jianshu.com/p/62f1b963baa6  
 
 ## Dump cmake builtin macros
 ```cmake
