@@ -281,3 +281,16 @@ screen # Avoid ssh connection lost
 do-release-upgrade -d
 ```
 
+## php xdebug
+* Open phpForApache.ini
+* Edit [xdebug] section
+ ```ini
+zend_extension="path/to/php/zend_ext/php_xdebug-2.8.0-7.3-vc15-x86_64.dll"
+xdebug.remote_enable = 1
+xdebug.remote_autostart = 1
+xdebug.remote_handler=dbgp
+xdebug.remote_mode=req
+xdebug.romote_host=localhost
+xdebug.remote_port=9000
+ ```
+
