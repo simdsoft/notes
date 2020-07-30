@@ -1,5 +1,8 @@
 # notes
 
+## ios debug devices
+https://www.jianshu.com/p/8c99cb119bb3
+
 ## Upgrade brew with mirrors
 Install: https://gitee.com/simdsoft/brew-install  
 Update: modify /usr/local/Homebrew/Library/Homebrew/install.sh  
@@ -154,6 +157,14 @@ python -m pip install pywin32
 
 ## iOS xcodebuild export, xxx is not an 'iOS App Store' profile.
 Add thinning=none to XXXExportOptions.plist
+
+## build engine-x
+### ios
+```sh
+mkdir build
+cd build
+cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../cmake/ios.toolchain.cmake -DPLATFORM=OS -DENABLE_ARC=0 -DENABLE_BITCODE=0
+```
 
 ## Build openal-soft for ios platform
 ### xcode11 + cmake-3.17.3 works well
