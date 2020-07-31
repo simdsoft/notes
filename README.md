@@ -188,11 +188,17 @@ CMake Gen ios xcodeproject with default cmake toolchain:
 ```cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphoneos -DCMAKE_C_COMPILER=/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -DCMAKE_CXX_COMPILER=/Applications/Xcode.app/Contents/Developer/usr/bin/g++```
 
 5. openal: https://github.com/kcat/openal-soft
+* Gen with custom ios-cmake toolchain
 ```sh
-cmake -GXcode .. -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DPLATFORM=OS -DCMAKE_CXX_EXTENSIONS=OFF -DALSOFT_REQUIRE_COREAUDIO=ON  -DALSOFT_EMBED_HRTF_DATA=YES -DLIBTYPE=STATIC -DALSOFT_UTILS=OFF -DALSOFT_EXAMPLES=OFF
+cmake -GXcode .. -DCMAKE_TOOLCHAIN_FILE=../cmake/ios.toolchain.cmake -DPLATFORM=OS -DCMAKE_CXX_EXTENSIONS=OFF -DALSOFT_REQUIRE_COREAUDIO=ON  -DALSOFT_EMBED_HRTF_DATA=YES -DLIBTYPE=STATIC -DALSOFT_UTILS=OFF -DALSOFT_EXAMPLES=OFF
+cmake -GXcode .. -DCMAKE_TOOLCHAIN_FILE=../cmake/ios.toolchain.cmake -DPLATFORM=SIMULATOR64 -DCMAKE_CXX_EXTENSIONS=OFF -DALSOFT_REQUIRE_COREAUDIO=ON  -DALSOFT_EMBED_HRTF_DATA=YES -DLIBTYPE=STATIC -DALSOFT_UTILS=OFF -DALSOFT_EXAMPLES=OFF
+```
+* Gen combine .a to 1 flat
+```sh
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static /Users/${USER}/dev/openal-soft/build/OpenAL.build/Release-iphoneos/OpenAL.build/Objects-normal/armv7/libopenal.a /Users/${USER}/dev/openal-soft/build/OpenAL.build/Release-iphoneos/OpenAL.build/Objects-normal/arm64/libopenal.a /Users/${USER}/dev/openal-soft/build_x64/Release-iphonesimulator/libopenal.a -o /Users/${USER}/dev/openal-soft/build/Release-iphoneos/libopenal.a
 ```
 
-6. openal-soft-1.19:
+* Gen with cmake official(**device doesn't work**)
 ```sh
 cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphonesimulator13.6 -DLIBTYPE=STATIC -DALSOFT_UTILS=OFF -DALSOFT_EXAMPLES=OFF -DALSOFT_EMBED_HRTF_DATA=YES -DALSOFT_TESTS=OFF
 ```
@@ -216,11 +222,6 @@ cmake --build . --config Release --target vorbis vorbisfile
 
 ### check arch of .a
 ```lipo -info libogg.a```
-
-### Combine .a manually
-```sh
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static /Users/bel/dev/openal-soft/build/OpenAL.build/Release-iphoneos/OpenAL.build/Objects-normal/armv7/libopenal.a /Users/bel/dev/openal-soft/build64/Release-iphonesimulator/libopenal.a /Users/bel/dev/openal-soft/build/OpenAL.build/Release-iphoneos/OpenAL.build/Objects-normal/arm64/libopenal.a -o /Users/bel/dev/openal-soft/build/Release-iphoneos/libopenal.a 
-```
 
 ## Use Visual Studio find chinese charactors regex expression
 ```sh
