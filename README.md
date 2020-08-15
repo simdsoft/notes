@@ -113,7 +113,8 @@ for non-win32 platforms, you should copy mpg123.h from ```src/libmpg123/mpg123.h
 ### libogg-1.3.4 (require android-cmake: https://github.com/taka-no-me/android-cmake)
 ```sh
 mkdir build_arm64
-cmake .. -DCMAKE_TOOLCHAIN_FILE=../../android-cmake/android.toolchain.cmake -DANDROID_NDK=/usr/local/src/android-ndk-r14b -DCMAKE_BUILD_TYPE=Release -DANDROID_ABI="arm64-v8a" ANDROID_NATIVE_API_LEVEL=android-21 .. -DCMAKE_MAKE_PROGRAM=/opt/arm64-standalone-toolchain/bin/makecmake -DCMAKE_TOOLCHAIN_FILE=../../android-cmake/android.toolchain.cmake -DANDROID_NDK=/usr/local/src/android-ndk-r14b -DCMAKE_BUILD_TYPE=Release -DANDROID_ABI="arm64-v8a" -DCMAKE_MAKE_PROGRAM=/usr/local/src/android-ndk-r14b/prebuilt/linux-x86_64/bin/make
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../../android-cmake/android.toolchain.cmake -DANDROID_NDK=/usr/local/src/android-ndk-r14b -DCMAKE_BUILD_TYPE=Release -DANDROID_ABI="arm64-v8a" ANDROID_NATIVE_API_LEVEL=android-21 .. -DCMAKE_MAKE_PROGRAM=/opt/arm64-standalone-toolchain/bin/make
+cmake -DCMAKE_TOOLCHAIN_FILE=../../android-cmake/android.toolchain.cmake -DANDROID_NDK=/usr/local/src/android-ndk-r14b -DCMAKE_BUILD_TYPE=Release -DANDROID_ABI="arm64-v8a" -DCMAKE_MAKE_PROGRAM=/usr/local/src/android-ndk-r14b/prebuilt/linux-x86_64/bin/make
 ```
 
 ### libvorbis-1.3.6 with libogg-1.3.3: 
