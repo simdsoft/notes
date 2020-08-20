@@ -159,12 +159,12 @@ python -m pip install pywin32
 ## iOS xcodebuild export, xxx is not an 'iOS App Store' profile.
 Add thinning=none to XXXExportOptions.plist
 
-## build engine-x
+## build EGNX
 ### ios
 ```sh
 mkdir build
 cd build
-cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../cmake/ios.toolchain.cmake -DPLATFORM=OS -DENABLE_ARC=0 -DENABLE_BITCODE=0
+cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../cmake/ios.toolchain.cmake -DPLATFORM=OS -DENABLE_ARC=0
 ```
 
 ## Build openal-soft for ios platform
@@ -197,6 +197,11 @@ cmake -GXcode .. -DCMAKE_TOOLCHAIN_FILE=../cmake/ios.toolchain.cmake -DPLATFORM=
 * Gen combine .a to 1 flat
 ```sh
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static /Users/${USER}/dev/openal-soft/build/OpenAL.build/Release-iphoneos/OpenAL.build/Objects-normal/armv7/libopenal.a /Users/${USER}/dev/openal-soft/build/OpenAL.build/Release-iphoneos/OpenAL.build/Objects-normal/arm64/libopenal.a /Users/${USER}/dev/openal-soft/build_x64/Release-iphonesimulator/libopenal.a -o /Users/${USER}/dev/openal-soft/build/Release-iphoneos/libopenal.a
+```
+
+* Combine dylib to 1 flat
+```sh
+lipo -create <input files> -output <output_file>
 ```
 
 * Gen with cmake official(**device doesn't work**)
