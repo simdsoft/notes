@@ -7,6 +7,7 @@ https://www.jianshu.com/p/8c99cb119bb3
 Install: https://gitee.com/simdsoft/brew-install  
 Update: modify /usr/local/Homebrew/Library/Homebrew/install.sh  
 change homebrew-core repo to https://gitee.com/simdsoft/homebrew-core  
+https://www.jianshu.com/p/8a2ac505ff3e  
 https://www.jianshu.com/p/62f1b963baa6  
 
 ## Dump cmake builtin macros
