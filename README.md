@@ -212,17 +212,15 @@ cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphonesimulator13.6
 
 ### ogg
 ```sh
-mkdir build
-cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DPLATFORM=OS
-cmake --build . --config Release --target ogg
+cmake . -B build_ios -G Xcode -DCMAKE_TOOLCHAIN_FILE=../ios.mini.cmake "-DCMAKE_OSX_ARCHITECTURES=armv7;arm64"
+cmake --build build_ios --config Release --target ogg
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static ./build/libogg.build/Release-iphoneos/ogg.build/Objects-normal/armv7/libogg.a ./build_x86/Release-iphonesimulator/libogg.a ./build_x64/Release-iphonesimulator/libogg.a ./build/libogg.build/Release-iphoneos/ogg.build/Objects-normal/arm64/libogg.a -o ./lib/libogg.a
 ```
 
 ### vorbis
 ```sh
-mkdir build
-cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../../ios-cmake/ios.toolchain.cmake -DOGG_INCLUDE_DIRS=/Users/halx99/Documents/ogg/include -DOGG_LIBRARIES=/Users/halx99/Documents/ogg/lib/ -DPLATFORM=OS
-cmake --build . --config Release --target vorbis vorbisfile
+cmake . -B build_ios -G Xcode  -DCMAKE_TOOLCHAIN_FILE=../ios.mini.cmake "-DCMAKE_OSX_ARCHITECTURES=armv7;arm64" -DOGG_INCLUDE_DIR=/Users/halx99/dev/ogg/include -DOGG_LIBRARY=/Users/halx99/dev/ogg/lib/ -DPLATFORM=OS
+cmake --build build_ios --config Release --target vorbis vorbisfile
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static ./build/lib/vorbis.build/Release-iphoneos/vorbis.build/Objects-normal/armv7/libvorbis.a ./build_x86/lib/Release-iphonesimulator/libvorbis.a ./build_x64/lib/Release-iphonesimulator/libvorbis.a ./build/lib/vorbis.build/Release-iphoneos/vorbis.build/Objects-normal/arm64/libvorbis.a -o ./libs/libvorbis.a
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static ./build/lib/vorbis.build/Release-iphoneos/vorbisfile.build/Objects-normal/armv7/libvorbisfile.a ./build_x86/lib/Release-iphonesimulator/libvorbisfile.a ./build_x64/lib/Release-iphonesimulator/libvorbisfile.a ./build/lib/vorbis.build/Release-iphoneos/vorbisfile.build/Objects-normal/arm64/libvorbisfile.a -o ./libs/libvorbisfile.a
 ```
