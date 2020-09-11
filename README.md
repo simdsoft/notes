@@ -1,4 +1,8 @@
 # notes
+## centos7 install gitea
+```
+adduser -r -s /bin/bash -c 'Git Version Control' -U -m git
+```
 
 ## ios debug devices
 https://www.jianshu.com/p/8c99cb119bb3
