@@ -1,4 +1,7 @@
 # notes
+## python mirrors
+* http://npm.taobao.org/mirrors/python
+
 ## centos7 install gitea
 ```
 adduser -r -s /bin/bash -c 'Git Version Control' -U -m git
