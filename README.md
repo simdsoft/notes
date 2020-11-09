@@ -1,4 +1,11 @@
 # notes
+## clang arm predefininations
+- clang -arch arm64 -E -dM - < /dev/null
+```cpp
+#define __arm64 1
+#define __arm64__ 1
+```
+
 ## python mirrors
 * http://npm.taobao.org/mirrors/python
 
