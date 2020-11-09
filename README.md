@@ -1,6 +1,6 @@
 # notes
 ## clang arm predefininations
-- clang -arch arm64 -E -dM - < /dev/null
+- clang -arch arm64 -E -dM - < /dev/null | grep arm
 ```cpp
 #define __arm64 1
 #define __arm64__ 1
