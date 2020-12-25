@@ -1,4 +1,7 @@
 # notes
+## 中国国家企业信用查询
+http://www.gsxt.gov.cn/
+
 ## clang arm predefininations
 - clang -arch arm64 -E -dM - < /dev/null | grep arm
 ```cpp
