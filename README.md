@@ -1,6 +1,14 @@
 # notes
-## 中国国家企业信用查询
+## gsxt
 http://www.gsxt.gov.cn/
+
+## jar recompress
+``sh
+cd xxx
+jar -xf xxx.jar
+mv xxx.jar ../
+jar -cvfm xxx.jar META-INF/MANIFEST.MF  ./
+```
 
 ## clang arm predefininations
 - clang -arch arm64 -E -dM - < /dev/null | grep arm
