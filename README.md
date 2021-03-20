@@ -3,7 +3,7 @@
 http://www.gsxt.gov.cn/
 
 ## jar recompress
-``sh
+```sh
 cd xxx
 jar -xf xxx.jar
 mv xxx.jar ../
