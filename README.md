@@ -1,4 +1,10 @@
 # notes
+
+## git push
+```sh
+git push origin --tags -f
+```
+
 ## gsxt
 http://www.gsxt.gov.cn/
 
