@@ -1,5 +1,14 @@
 # notes
 
+## mac java
+```sh
+vim ~/.zshrc
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home
+export CLASSPAHT=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=$JAVA_HOME/bin:$PATH
+source ~/.zshrc
+```
+
 ## git push
 ```sh
 git push origin --tags -f
