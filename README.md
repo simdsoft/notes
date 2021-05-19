@@ -1,5 +1,43 @@
 # notes
 
+## centos6.10 install gcc5
+1. Add repo (important)
+```sh
+vim /etc/yum.repos.d/devtools-4.repo
+# input follow content
+[hhorak-devtoolset-4-rebuild-bootstrap]
+name=Copr repo for devtoolset-4-rebuild-bootstrap owned by hhorak
+baseurl=https://copr-be.cloud.fedoraproject.org/results/hhorak/devtoolset-4-rebuild-bootstrap/epel-6-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://copr-be.cloud.fedoraproject.org/results/hhorak/devtoolset-4-rebuild-bootstrap/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+```
+2. install
+```
+# install scl
+yum -y install centos-release-scl
+# install gcc-5 from devtoolset-4
+yum -y install devtoolset-4-gcc devtoolset-4-gcc-c++ devtoolset-4-binutils
+# enable temporary
+scl enable devtoolset-4 bash
+gcc -v
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.2.1/lto-wrapper
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-4/root/usr --mandir=/opt/rh/devtoolset-4/root/usr/share/man --infodir=/opt/rh/devtoolset-4/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-5.2.1-20150902/obj-x86_64-redhat-linux/isl-install --enable-libmpx --with-mpc=/builddir/build/BUILD/gcc-5.2.1-20150902/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 5.2.1 20150902 (Red Hat 5.2.1-2) (GCC)
+```
+2. set gcc-5 as default
+```sh
+echo "source /opt/rh/devtoolset-4/enable" >>/etc/profile
+```
+
 ## mac java
 ```sh
 vim ~/.zshrc
