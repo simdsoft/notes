@@ -113,14 +113,14 @@ https://docs.microsoft.com/en-us/cpp/build/reference/o1-o2-minimize-size-maximiz
 ## Apple cert profile cache directory
 ```~/Library/MobileDevice/Provisioning Profiles```
 
-## Create Visual Studio 2019 offline installer
+## Create Visual Studio 2022 offline installer
 For C++ desktop development, run:
 ```bat
-vs_community.exe --layout D:\software\vs2019 --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
+vs_community.exe --layout D:\softwares\2022 --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
 ```
 For .Net & C++ desktop development, run:
 ```bat
-vs_community.exe --layout D:\software\vs2019 --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended  --lang en-US
+vs_community.exe --layout D:\softwares\2022 --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended  --lang en-US
 ```
 
 ## build apk, config noCompress file type at app/build.gradle
