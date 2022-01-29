@@ -127,7 +127,7 @@ vs_community.exe --layout D:\softwares\2022 --add Microsoft.VisualStudio.Workloa
 ```gradle
 android {
     aaptOptions {
-       noCompress 'mp3','ogg','wav','mp4','ttf'
+       noCompress 'mp3','ogg','wav','mp4','ttf','ttc'
     }
 }
 ```
