@@ -1,5 +1,16 @@
 # notes
 
+## ubuntu nvdia driver
+
+命令行安装ok
+https://blog.csdn.net/qq_34972053/article/details/127689332
+
+chrome安装
+
+vscode安装
+
+缺x11
+
 ## centos6.10 install gcc5
 1. Add repo (important)
 ```sh
