@@ -1,5 +1,8 @@
 # notes
 
+## 通过wsl2访问Linux物理磁盘
+https://devblogs.microsoft.com/commandline/access-linux-filesystems-in-windows-and-wsl-2/
+
 ## ubuntu nvdia driver
 
 命令行安装ok
