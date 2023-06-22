@@ -1,5 +1,16 @@
 # notes
 
+## install xcode manually
+
+```
+curl https://download.developer.apple.com/Developer_Tools/Xcode_14.2/Xcode_14.2.xip -o ~/Downloads/Xcode_14.2.xip
+# extract it
+cd ~/Downloads/
+xip -x ~/Downloads/Xcode_14.2.xip
+mv Xcode.app /Applications/Xcode14.2.app
+sudo xcode-select -switch /Applications/Xcode14.2.app
+```
+
 ## 通过wsl2访问Linux物理磁盘
 https://devblogs.microsoft.com/commandline/access-linux-filesystems-in-windows-and-wsl-2/
 
