@@ -2,8 +2,11 @@
 
 ## install xcode manually
 
+1. visit: https://developer.apple.com/download/all/
+2. search `xcode 14.2`
+3. click .xip to download
+
 ```
-curl https://download.developer.apple.com/Developer_Tools/Xcode_14.2/Xcode_14.2.xip -o ~/Downloads/Xcode_14.2.xip
 # extract it
 cd ~/Downloads/
 xip -x ~/Downloads/Xcode_14.2.xip
