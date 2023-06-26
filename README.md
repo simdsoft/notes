@@ -10,8 +10,8 @@
 # extract it
 cd ~/Downloads/
 xip -x ~/Downloads/Xcode_14.2.xip
-mv Xcode.app /Applications/Xcode14.2.app
-sudo xcode-select -switch /Applications/Xcode14.2.app
+mv Xcode.app /Applications/Xcode_14.2.app
+sudo xcode-select -switch /Applications/Xcode_14.2.app
 ```
 
 ## 通过wsl2访问Linux物理磁盘
