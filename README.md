@@ -1,5 +1,13 @@
 # notes
 
+## install vs2022 specific version
+
+1. Locate the particular version in the Microsoft Update Catalog and download the installer.
+2. Extract ChannelManifest.json from the installer. Should be about 90 KiB.
+3. Upload it to a web server so that you have a URI it could be downloaded from, say https://example.org/ChannelManifest.json.
+4. Go to C:\Program Files (x86)\Microsoft Visual Studio\Installer and open the command line there.
+5. Run setup update --channelId VisualStudio.17.Release --productId Microsoft.VisualStudio.Product.Community --channelURI "https://example.org/ChannelManifest.json". Feel free to add other parameters.
+
 ## install xcode manually
 
 1. visit: https://developer.apple.com/download/all/
