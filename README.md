@@ -3,7 +3,29 @@
 ## Force switch Windows 11 insider to Release Preview
 
 1. Ensure go back to release preview build
-2. https://github.com/abbodi1406/offlineinsiderenroll
+
+Methd1:  
+按Win+R输入regedit打开注册表  
+
+定位路径：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\UI\Selection  
+
+修改UIBranch值为ReleasePreview  
+
+修改ContentType值为Mainline  
+
+修改Ring和UIRing值为Retail  
+
+定位路径：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\Applicability  
+
+修改BranchName值为ReleasePreview  
+
+修改ContentType值为Mainline  
+
+修改Ring值为Retail  
+
+重启系统后检查设置-更新-Insider Program是否变为Release Preview  
+
+Method2. https://github.com/abbodi1406/offlineinsiderenroll  
 
 
 ## install vs2022 specific version
