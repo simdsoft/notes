@@ -3,7 +3,7 @@
 ## Force switch Windows 11 insider to Release Preview
 
 1. Ensure go back to release preview build
-2. Edit reg: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\UI\Selection\UIBranch`
+2. https://github.com/abbodi1406/offlineinsiderenroll
 
 
 ## install vs2022 specific version
