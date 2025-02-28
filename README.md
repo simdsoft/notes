@@ -1,5 +1,9 @@
 # notes
 
+## adb connect to MuMu emulator
+
+`adb connect 127.0.0.1:7555`
+
 ## Force switch Windows 11 insider to Release Preview
 
 1. Ensure go back to release preview build
