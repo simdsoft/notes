@@ -1,5 +1,13 @@
 # notes
 
+## adb list package
+
+```pwsh
+adb shell pm list packages | findstr "xxx"
+adb shell pm path com.xxx
+adb pull xxxx ./
+```
+
 ## adb connect to MuMu emulator
 
 `adb connect 127.0.0.1:7555`
