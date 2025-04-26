@@ -1,5 +1,48 @@
 # notes
 
+## uninsatll old kernrl
+
+卸载 Ubuntu 的旧版本内核可以释放磁盘空间并优化系统性能。以下是几种常见方法：
+
+1. **自动卸载未使用的内核**：
+   - 打开终端，运行以下命令查看已安装的内核列表：
+     ```bash
+     dpkg --list | grep linux-image
+     ```
+   - 然后运行以下命令自动卸载未使用的内核：
+     ```bash
+     sudo apt autoremove --purge
+     ```
+
+2. **手动删除特定内核**：
+   - 首先运行以下命令查看当前正在使用的内核版本：
+     ```bash
+     uname -r
+     ```
+   - 确保不要删除当前使用的内核。接着运行以下命令列出所有已安装的内核：
+     ```bash
+     dpkg --list | grep linux-image
+     ```
+   - 使用以下命令删除指定版本的内核（替换 `x.x.x-x` 为实际版本号）：
+     ```bash
+     sudo apt purge linux-image-x.x.x-x-generic
+     ```
+   - 删除后，更新 GRUB 引导加载程序：
+     ```bash
+     sudo update-grub
+     ```
+   - 最后，重新启动系统。
+
+3. **清理残留的配置文件**：
+   - 使用以下命令清除所有状态为 `rc` 的包：
+     ```bash
+     sudo dpkg --purge $(dpkg -l | awk '/^rc/{print $2}')
+     ```
+
+在操作之前，请备份重要数据，并保留至少一个旧版本内核以防万一。如果需要更详细的指导，可以参考[这里](https://bing.com/search?q=ubuntu+%e5%a6%82%e4%bd%95%e5%8d%b8%e8%bd%bd%e6%97%a7%e7%89%88%e6%9c%ac%e5%86%85%e6%a0%b8)或[这里](http://www.linuxrtm.com/c/22291.html)。
+
+希望这些方法对你有所帮助！如果有其他问题，随时告诉我。 😊
+
 ## adb list package
 
 ```pwsh
