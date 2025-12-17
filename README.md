@@ -125,7 +125,7 @@ unxip ~/Downloads/Xcode_26.2_Universal.xip /Applications/
 # multi install
 mkdir xcode-26.2-extract
 unxip ~/Downloads/Xcode_26.2_Universal.xip /xcode-26.2-extract/
-mv /xcode-26.2-extract/Xcode.app /Applications/Xcode-26.2.app
+mv /xcode-26.2-extract/Xcode.app /Applications/Xcode_26.2.app
 ```
 
 ## 通过wsl2访问Linux物理磁盘
