@@ -108,9 +108,8 @@ xcode-14.2
 ```sh
 # extract it
 cd ~/Downloads/
-unxip ~/Downloads/Xcode_14.2.xip /Applications/Xcode_14.2.app
-# xip -x ~/Downloads/Xcode_14.2.xip
-# mv Xcode.app /Applications/Xcode_14.2.app
+xip -x ~/Downloads/Xcode_14.2.xip
+mv Xcode.app /Applications/Xcode_14.2.app
 sudo xcode-select -switch /Applications/Xcode_14.2.app
 ```
 
