@@ -93,18 +93,39 @@ Method2. https://github.com/abbodi1406/offlineinsiderenroll
 
 ## install xcode manually
 
+### requires
+
+```sh
+brew install unxip
+```
+
 1. visit: https://developer.apple.com/download/all/
 2. search `xcode 14.2`
 3. click .xip to download
 
-```
+xcode-14.2
+
+```sh
 # extract it
 cd ~/Downloads/
-brew install unxip
 unxip ~/Downloads/Xcode_14.2.xip /Applications/Xcode_14.2.app
 # xip -x ~/Downloads/Xcode_14.2.xip
 # mv Xcode.app /Applications/Xcode_14.2.app
 sudo xcode-select -switch /Applications/Xcode_14.2.app
+```
+
+xcode-26.x
+
+```sh
+cd ~/Downloads/
+
+# overwrite
+unxip ~/Downloads/Xcode_26.2_Universal.xip /Applications/
+
+# multi install
+mkdir xcode-26.2-extract
+unxip ~/Downloads/Xcode_26.2_Universal.xip /xcode-26.2-extract/
+mv /xcode-26.2-extract/Xcode.app /Applications/Xcode-26.2.app
 ```
 
 ## 通过wsl2访问Linux物理磁盘
