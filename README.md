@@ -119,7 +119,7 @@ xcode-26.x
 ```sh
 cd ~/Downloads/
 
-# overwrite
+# overwrite, please uninstall /Applications/Xcode.app manually first
 unxip ~/Downloads/Xcode_26.2_Universal.xip /Applications/
 
 # multi install
