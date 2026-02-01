@@ -1,5 +1,10 @@
 # notes
 
+## emsdk
+
+- emsdk-5.0.0
+    - linux: https://storage.googleapis.com/webassembly/emscripten-releases-builds/linux/e44d3cc557d78155966478aa2bd8dec657609619/wasm-binaries.tar.xz
+
 ## uninsatll old kernrl
 
 卸载 Ubuntu 的旧版本内核可以释放磁盘空间并优化系统性能。以下是几种常见方法：
